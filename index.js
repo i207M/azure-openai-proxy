@@ -19,7 +19,7 @@ const env = {
   // Custom API key mapping
   // If not matched, the API key will not be replaced
   apiKeyMapping: {
-    'john-smith': '<Insert Here>',
+    'john-smith-key': '<Insert Here>',
   },
 };
 
@@ -62,6 +62,7 @@ async function handleRequest(request) {
   const proxyRequest = new Request(fetchAPI, request);
   proxyRequest.headers.set('api-key', authKey);
 
+  // unlike haibbo/cf-openai-azure-proxy, we don't manipulate the response
   return fetch(proxyRequest);
 }
 
