@@ -1,4 +1,4 @@
-# Azure OpenAI Proxy
+# Azure2OpenAI Proxy
 
 A Cloudflare worker script to proxy OpenAI‘s request to Azure OpenAI Service. It supports multiple models and multiple custom keys.
 
